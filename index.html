@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezaul Karim | DevOps & Cloud Engineer</title>
+    <meta name="description" content="Portfolio of Rezaul Karim, a senior DevOps and Cloud Engineer specializing in scalable infrastructure, automation, and reliability engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="grid-overlay"></div>
+    <main class="hero">
+        <section class="hero-content">
+            <div class="identity">
+                <span class="badge">Production Control System</span>
+                <h1 class="name">Rezaul Karim</h1>
+                <h2 class="role">DevOps & Cloud Engineer</h2>
+                <p class="subtitle">Cloud Infrastructure | Automation | Reliability Engineering</p>
+            </div>
+            
+            <div class="hook">
+                <p>Operating real-time, highly-available cloud systems with automated scaling and production-grade observability.</p>
+            </div>
+
+            <div class="tech-stack">
+                <span class="chip">AWS</span>
+                <span class="chip">Kubernetes</span>
+                <span class="chip">Docker</span>
+                <span class="chip">CI/CD</span>
+                <span class="chip">Terraform</span>
+                <span class="chip">Observability</span>
+                <span class="chip">PostgreSQL HA</span>
+                <span class="chip">Linux Systems</span>
+            </div>
+
+            <div class="actions">
+                <a href="#work" class="btn btn-primary">View Infrastructure Work</a>
+                <a href="#resume" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </section>
+
+        <section class="hero-visual">
+            <div class="infra-container" id="infra-container">
+                <!-- SVG Visualization will be injected/managed here -->
+                <svg id="infra-svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid meet">
+                    <!-- Definitions for gradients and markers -->
+                    <defs>
+                        <linearGradient id="line-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:var(--accent-color);stop-opacity:0.2" />
+                            <stop offset="50%" style="stop-color:var(--accent-color);stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:var(--accent-color);stop-opacity:0.2" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <!-- Arrow Markers -->
+                        <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--request-color)" />
+                        </marker>
+                        <marker id="arrow-green" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                            <path d="M 10 0 L 0 5 L 10 10 z" fill="var(--response-color)" />
+                        </marker>
+                    </defs>
+                    
+                    <!-- Paths and Nodes will be created via JS or hardcoded for layout -->
+                </svg>
+
+                <div class="observability-panel">
+                    <div class="panel-header">
+                        <div class="header-left">
+                            <span class="status-dot status-online"></span>
+                            <span class="panel-title">SYSTEM OBSERVABILITY</span>
+                        </div>
+                        <div class="header-right">
+                            <span id="current-command" class="command-text">$ kubectl get pods --all-namespaces</span>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-container">
+                        <div id="terminal-logs" class="terminal-content">
+                            <!-- Logs will stream here -->
+                        </div>
+                    </div>
+
+                    <div class="panel-footer">
+                        <div class="stat-item">
+                            <span class="stat-label">LATENCY</span>
+                            <span id="latency-val" class="stat-value">22ms</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">UPTIME</span>
+                            <span class="stat-value">99.98%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">STATUS</span>
+                            <span id="cpu-val" class="stat-value">HEALTHY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="about" class="about-section scroll-reveal">
+        <div class="about-container">
+            <div class="about-left">
+                <div class="profile-frame">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Rezaul Karim Profile" class="profile-img">
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <div class="about-header">
+                    <span class="section-label">ABOUT</span>
+                    <h2 class="about-name">Rezaul Karim</h2>
+                    <h3 class="about-role">DevOps & Cloud Engineer</h3>
+                </div>
+
+                <div class="about-content">
+                    <p>I architect and operate high-performance, cloud-native ecosystems with a focus on absolute reliability and automated scalability. My approach is rooted in systems thinking—bridging the gap between complex infrastructure development and seamless production operations.</p>
+                    <p>By leveraging production-grade observability and automation-first principles, I ensure that critical cloud environments remain resilient under pressure while maintaining rapid delivery cycles.</p>
+                    <p>My expertise lies in building self-healing distributed systems, managing large-scale Kubernetes clusters, and implementing Infrastructure as Code (IaC) to eliminate technical debt and human error. I am committed to driving operational excellence through data-driven performance tuning and robust disaster recovery strategies that safeguard mission-critical data.</p>
+                </div>
+
+                <div class="capabilities-grid">
+                    <span class="cap-chip">Cloud Infrastructure Design</span>
+                    <span class="cap-chip">Kubernetes Orchestration</span>
+                    <span class="cap-chip">CI/CD Automation</span>
+                    <span class="cap-chip">System Observability</span>
+                    <span class="cap-chip">High Availability Systems</span>
+                    <span class="cap-chip">Performance Optimization</span>
+                </div>
+
+                <div class="tech-stack-inline">
+                    <span>AWS</span> &bull; <span>Kubernetes</span> &bull; <span>Docker</span> &bull; <span>Terraform</span> &bull; <span>CI/CD</span> &bull; <span>Linux</span> &bull; <span>PostgreSQL</span> &bull; <span>Monitoring</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="infra.js"></script>
+</body>
+</html>
